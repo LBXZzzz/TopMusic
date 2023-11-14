@@ -30,6 +30,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dataBinding.enable=true
 }
 
 dependencies {
@@ -40,4 +41,9 @@ dependencies {
     testImplementation (Text.junit)
     androidTestImplementation (AndroidTest.junit)
     androidTestImplementation (AndroidTest.espresso)
+
+
+    implementation project(':common')
+
+
 }
