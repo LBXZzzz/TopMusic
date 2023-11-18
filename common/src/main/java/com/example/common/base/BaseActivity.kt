@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.example.common.ACTION_FINISH
+import com.example.common.ACTION_RECREATE
 
 abstract class BaseActivity<VB : ViewDataBinding> : AppCompatActivity() {
 
@@ -19,10 +21,13 @@ abstract class BaseActivity<VB : ViewDataBinding> : AppCompatActivity() {
 
     protected val binding: VB get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    final override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         initViewDataBinding()
+        onActivityCreate(savedInstanceState)
     }
+
+    public abstract fun onActivityCreate(savedInstanceState: Bundle?)
 
     private fun initViewDataBinding() {
         _binding = DataBindingUtil.setContentView(this, layout)

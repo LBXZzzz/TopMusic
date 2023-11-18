@@ -6,12 +6,12 @@ import com.example.common.base.BaseActivity
 import com.example.topmusic.databinding.ActivityMainBinding
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : com.example.common.base.BaseActivity<ActivityMainBinding>() {
     override val layout: Int
         get() = R.layout.activity_main
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onActivityCreate(savedInstanceState: Bundle?) {
         binding.ppp.text = "你好"
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.common.base;
+package com.example.common;
 
 const val ACTION_RECREATE = "cn.topmusic.android.action.recreate"
 
