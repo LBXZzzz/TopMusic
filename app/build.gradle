@@ -41,7 +41,8 @@ dependencies {
     testImplementation (Text.junit)
     androidTestImplementation (AndroidTest.junit)
     androidTestImplementation (AndroidTest.espresso)
-
+    implementation(Navigation.fragment)
+    implementation(Navigation.ui)
 
     implementation project(':common')
 
