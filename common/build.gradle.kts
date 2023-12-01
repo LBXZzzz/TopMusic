@@ -41,4 +41,12 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    // retrofit2 okhttp 的进一步简化使用
+    api("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // kotlin 协程相关
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.0-RC")
+    api("com.squareup.retrofit2:adapter-rxjava2:2.5.0")
 }

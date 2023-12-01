@@ -84,3 +84,9 @@ object Banner {
     const val banner1 = "com.github.donkingliang:CustomBanner:1.1.3"
     const val banner2 = "com.github.bingoogolapple:BGABanner-Android:3.0.1"
 }
+
+object Coroutine{
+    const val coroutines_core="org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2"
+    const val coroutines_android="org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2"
+}
+

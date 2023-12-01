@@ -1,15 +1,18 @@
 package com.example.topmusic
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.example.common.base.BaseActivity
+import com.example.common.app.Api
+import com.example.common.net.request
 import com.example.topmusic.databinding.ActivityMainBinding
+
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 
 class MainActivity : com.example.common.base.BaseActivity<ActivityMainBinding>() {
@@ -20,8 +23,10 @@ class MainActivity : com.example.common.base.BaseActivity<ActivityMainBinding>()
 
     override fun onActivityCreate(savedInstanceState: Bundle?) {
         initNav()
+
     }
 
+    //初始化底部导航栏
     private fun initNav() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_top_music_host) as NavHostFragment
